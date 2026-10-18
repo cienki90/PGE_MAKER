@@ -31,6 +31,7 @@ jobs:
           --add-data "szablon_opisu.docx;."
           --add-data "PPW miński szablon.docx;."
           --add-data "wzorce;wzorce"
+          --add-data "generator/fonty;fonty"
           --hidden-import PIL._tkinter_finder
           --hidden-import docx
           --hidden-import openpyxl
@@ -47,4 +48,4 @@ jobs:
           gh release create "$TAG" dist/PGE_MAKER.exe \
             --target "${{ github.sha }}" --latest \
             --title "PGE_MAKER $TAG" \
-            --notes "Program PGE_MAKER.exe - uruchom dwuklikiem, wskaż plik planu DXF, zaznacz co wygenerować (numeracja / przewieszenia / zestawienie / obliczenia / rysunki stałe / PZT / opisy / PPW) i wybierz katalog zapisu."
+            --notes "Program PGE_MAKER.exe - uruchom dwuklikiem, wskaż plik planu DXF, zaznacz co wygenerować (numeracja / przewieszenia / zestawienie / obliczenia / rysunki stałe / PZT / opisy / PPW / zakładki) i wybierz katalog zapisu."
